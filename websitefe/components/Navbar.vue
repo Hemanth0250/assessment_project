@@ -1,7 +1,7 @@
 <template>
   <nav
     :class="[
-      'w-full z-50 transition-all duration-300',
+      'l-xl w-full z-50 transition-all duration-300 ',
       isSticky ? 'fixed top-0 bg-black/80 backdrop-blur' : 'absolute top-0 bg-transparent'
     ]"
   >
@@ -33,7 +33,7 @@
     <transition name="fade">
       <div v-if="isMenuOpen" class="px-6 py-6 text-white md:hidden bg-black/90 backdrop-blur">
         <ul class="flex flex-col space-y-4 text-sm uppercase">
-          <li><NuxtLink to="/" class="block" :class="{ active: activeSection === 'home' }" @click="handleMobileNav">Home</NuxtLink></li>
+          <li><NuxtLink to="#hero" class="block" :class="{ active: activeSection === 'home' }" @click="handleMobileNav">Home</NuxtLink></li>
           <li><a href="#about" class="block" :class="{ active: activeSection === 'about' }" @click="handleMobileNav">About</a></li>
           <li><NuxtLink to="#services" class="block" :class="{ active: activeSection === 'services' }" @click="handleMobileNav">Services</NuxtLink></li>
           <li><NuxtLink to="#portfolio" class="block" :class="{ active: activeSection === 'portfolio' }" @click="handleMobileNav">Portfolio</NuxtLink></li>

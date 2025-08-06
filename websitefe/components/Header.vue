@@ -13,8 +13,8 @@
     <!-- Navbar -->
     <div class="relative z-10 max-w-screen-xl px-6 mx-auto">
       <!-- Top Bar -->
-      <div class="flex items-center justify-between py-4 text-xl font-raleway">
-        <div class="text-2xl font-bold cursor-pointer" @click="scrollToTop">Dewi</div>
+      <div class="flex items-center justify-between py-4 text-xl font-raleway ">
+        <div class="text-2xl font-bold cursor-pointer hover:text-orange-500" @click="scrollToTop">Dewi</div>
 
         <!-- Hamburger Icon -->
         <button @click="isMenuOpen = !isMenuOpen" class="z-50 md:hidden focus:outline-none">

@@ -1,7 +1,7 @@
 <template>
   <section id="portfolio" class="px-4 py-16 portfolio">
     <!-- Section Title -->
-    <div class="max-w-4xl px-4 mx-auto mb-12 text-center">
+    <div class="max-w-4xl px-4 mx-auto mb-12 text-center" data-aos="fade-up" data-aos-delay="100">
       <h2 class="relative inline-block text-sm font-semibold tracking-widest text-gray-500 uppercase">
         Portfolio
         <span class="block w-20 h-1 mx-auto mt-2 bg-orange-500"></span>
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Filters -->
-    <ul class="flex flex-wrap justify-center gap-4 mb-10 text-lg font-medium">
+    <ul class="flex flex-wrap justify-center gap-4 mb-10 text-lg font-medium" data-aos="fade-up" data-aos-delay="200">
       <li
         v-for="cat in categories"
         :key="cat"
@@ -25,7 +25,7 @@
     </ul>
 
     <!-- Portfolio Grid -->
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="250">
       <transition-group name="zoom" tag="div" class="contents">
         <div
           v-for="(item, index) in filteredItems"

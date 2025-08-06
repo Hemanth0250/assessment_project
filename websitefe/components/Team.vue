@@ -1,5 +1,5 @@
 <template>
-  <section id="team" class="py-16 bg-gray-100">
+  <section id="team" class="py-16 bg-gray-100" data-aos="fade-up" data-aos-delay="100">
     <!-- Section Title -->
      <div class="max-w-4xl px-4 mx-auto mb-12 text-center">
       <h2 class="relative inline-block text-sm font-semibold tracking-widest text-gray-500 uppercase">
@@ -13,9 +13,9 @@
     
 
     <!-- Team Grid -->
-    <div class="grid max-w-6xl grid-cols-1 gap-10 px-4 mx-auto sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid max-w-6xl grid-cols-1 gap-10 px-4 mx-auto sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="200">
       <div
-        v-for="(member, index) in teamMembers"
+        v-for="(member, index) in teamMembers" 
         :key="index"
         class="relative"
         :data-aos="'fade-up'"

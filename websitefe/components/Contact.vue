@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="py-16 contact section">
+  <section id="contact" class="py-16 contact section" data-aos="fade-up" data-aos-delay="100">
     <!-- Section Title -->
     <div class="max-w-4xl px-4 mx-auto mb-12 text-center">
       <h2 class="relative inline-block text-sm font-semibold tracking-widest text-gray-500 uppercase">

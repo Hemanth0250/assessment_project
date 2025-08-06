@@ -1,8 +1,7 @@
 <template>
   <section
     class="relative w-full h-screen text-white bg-center bg-cover"
-    style="background-image: url('/image/hero-bg.png')"
-  >
+    style="background-image: url('/image/hero-bg.png')" >
     <!-- Semi-transparent dark overlay (static) -->
     <div class="absolute inset-0 bg-black/60"></div>
 

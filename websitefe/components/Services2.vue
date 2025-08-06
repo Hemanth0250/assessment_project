@@ -1,5 +1,5 @@
 <template>
-  <section id="services-2" class="py-16 bg-gray-100">
+  <section id="services-2" class="py-16 bg-gray-100" data-aos="fade-up" data-aos-delay="100">
     <!-- Section Title -->
     <div class="max-w-4xl px-4 mx-auto mb-12 text-center">
       <h2 class="relative inline-block text-sm font-semibold tracking-widest text-gray-500 uppercase">
