@@ -1,7 +1,7 @@
 <template>
   <nav
     :class="[
-      'l-xl w-full z-50 transition-all duration-300 ',
+      'l-xl w-full z-50 transition-all duration-300',
       isSticky ? 'fixed top-0 bg-black/80 backdrop-blur' : 'absolute top-0 bg-transparent'
     ]"
   >
@@ -18,13 +18,29 @@
       </button>
 
       <!-- Desktop Nav -->
-      <div class="hidden gap-6 md:flex">
+      <div class="items-center hidden gap-6 md:flex">
         <NuxtLink to="#hero" class="nav-link" :class="{ active: activeSection === 'home' }" @click="scrollToTop">Home</NuxtLink>
         <a href="#about" class="nav-link" :class="{ active: activeSection === 'about' }">About</a>
         <a href="#services" class="nav-link" :class="{ active: activeSection === 'services' }">Services</a>
         <a href="#portfolio" class="nav-link" :class="{ active: activeSection === 'portfolio' }">Portfolio</a>
         <NuxtLink to="#team" class="nav-link" :class="{ active: activeSection === 'team' }">Team</NuxtLink>
         <NuxtLink to="#contact" class="nav-link" :class="{ active: activeSection === 'contact' }">Contact</NuxtLink>
+
+        <!-- Desktop Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 nav-link">
+            Dropdown
+            <i class="bi bi-chevron-down"></i>
+          </button>
+          <ul
+            class="absolute hidden w-40 mt-2 text-black bg-white rounded shadow-lg group-hover:block"
+          >
+            <li><a href="#option1" class="block px-4 py-2 hover:bg-gray-200">Option 1</a></li>
+            <li><a href="#option2" class="block px-4 py-2 hover:bg-gray-200">Option 2</a></li>
+            <li><a href="#option3" class="block px-4 py-2 hover:bg-gray-200">Option 3</a></li>
+          </ul>
+        </div>
+
         <NuxtLink to="https://www.youtube.com/" class="px-3 py-1 border border-white rounded hover:bg-orange-500 hover:text-black hover:border-orange-500">Get Started</NuxtLink>
       </div>
     </div>
@@ -39,6 +55,20 @@
           <li><NuxtLink to="#portfolio" class="block" :class="{ active: activeSection === 'portfolio' }" @click="handleMobileNav">Portfolio</NuxtLink></li>
           <li><NuxtLink to="#team" class="block" :class="{ active: activeSection === 'team' }" @click="handleMobileNav">Team</NuxtLink></li>
           <li><NuxtLink to="#contact" class="block" :class="{ active: activeSection === 'contact' }" @click="handleMobileNav">Contact</NuxtLink></li>
+
+          <!-- Mobile Dropdown -->
+          <li>
+            <button @click="toggleDropdown" class="flex items-center justify-between w-full">
+              Dropdown
+              <i :class="['bi', isDropdownOpen ? 'bi-chevron-up' : 'bi-chevron-down']"></i>
+            </button>
+            <ul v-show="isDropdownOpen" class="mt-2 ml-4 space-y-2 text-sm">
+              <li><a href="#option1" class="block" @click="handleMobileNav">Option 1</a></li>
+              <li><a href="#option2" class="block" @click="handleMobileNav">Option 2</a></li>
+              <li><a href="#option3" class="block" @click="handleMobileNav">Option 3</a></li>
+            </ul>
+          </li>
+
           <li>
             <NuxtLink to="https://www.youtube.com/" class="block px-4 py-1 border border-white rounded hover:bg-white hover:text-black" @click="handleMobileNav">
               Get Started
@@ -66,13 +96,19 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const isSticky = ref(false)
 const isMenuOpen = ref(false)
+const isDropdownOpen = ref(false)
 const activeSection = ref('home')
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
+  if (!isMenuOpen.value) isDropdownOpen.value = false
 }
 const closeMenu = () => {
   isMenuOpen.value = false
+  isDropdownOpen.value = false
+}
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value
 }
 const scrollToTop = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
