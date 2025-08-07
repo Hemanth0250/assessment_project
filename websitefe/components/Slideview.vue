@@ -1,7 +1,7 @@
 <template>
   <section id="testimonials" class="relative py-20 overflow-hidden text-white bg-gray-900">
     <img
-      src="E:\assessment project\websitefe\public\image\testimonials\testimonials-bg.jpg"
+      src="/image/testimonials/testimonials-bg.jpg"
       alt="Testimonials Background"
       class="absolute inset-0 z-0 object-cover w-full h-full opacity-20"
     />
