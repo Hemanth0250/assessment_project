@@ -20,11 +20,11 @@
       <!-- Desktop Nav -->
       <div class="items-center hidden gap-6 md:flex">
         <NuxtLink to="#hero" class="nav-link" :class="{ active: activeSection === 'home' }" @click="scrollToTop">Home</NuxtLink>
-        <a href="#about" class="nav-link" :class="{ active: activeSection === 'about' }">About</a>
-        <a href="#services" class="nav-link" :class="{ active: activeSection === 'services' }">Services</a>
-        <a href="#portfolio" class="nav-link" :class="{ active: activeSection === 'portfolio' }">Portfolio</a>
-        <NuxtLink to="#team" class="nav-link" :class="{ active: activeSection === 'team' }">Team</NuxtLink>
-        <NuxtLink to="#contact" class="nav-link" :class="{ active: activeSection === 'contact' }">Contact</NuxtLink>
+        <NuxtLink to="#about" class="nav-link" :class="{ active: activeSection === 'about' }" @click="scrollToTop">About</NuxtLink>
+        <NuxtLink to="#services" class="nav-link" :class="{ active: activeSection === 'services' }" @click="scrollToTop">Services</NuxtLink>
+        <NuxtLink to="#portfolio" class="nav-link" :class="{ active: activeSection === 'portfolio' }" @click="scrollToTop">Portfolio</NuxtLink>
+        <NuxtLink to="#team" class="nav-link" :class="{ active: activeSection === 'team' }" @click="scrollToTop">Team</NuxtLink>
+        <NuxtLink to="#contact" class="nav-link" :class="{ active: activeSection === 'contact' }" @click="scrollToTop">Contact</NuxtLink>
 
         <!-- Desktop Dropdown -->
         <div class="relative group">
@@ -50,7 +50,7 @@
       <div v-if="isMenuOpen" class="px-6 py-6 text-white md:hidden bg-black/90 backdrop-blur">
         <ul class="flex flex-col space-y-4 text-sm uppercase">
           <li><NuxtLink to="#hero" class="block" :class="{ active: activeSection === 'home' }" @click="handleMobileNav">Home</NuxtLink></li>
-          <li><a href="#about" class="block" :class="{ active: activeSection === 'about' }" @click="handleMobileNav">About</a></li>
+          <li><NuxtLink to="#about" class="block" :class="{ active: activeSection === 'about' }" @click="handleMobileNav">About</NuxtLink></li>
           <li><NuxtLink to="#services" class="block" :class="{ active: activeSection === 'services' }" @click="handleMobileNav">Services</NuxtLink></li>
           <li><NuxtLink to="#portfolio" class="block" :class="{ active: activeSection === 'portfolio' }" @click="handleMobileNav">Portfolio</NuxtLink></li>
           <li><NuxtLink to="#team" class="block" :class="{ active: activeSection === 'team' }" @click="handleMobileNav">Team</NuxtLink></li>
