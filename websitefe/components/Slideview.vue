@@ -5,7 +5,7 @@
       alt="Testimonials Background"
       class="absolute inset-0 z-0 object-cover w-full h-full opacity-20"
     />
-
+    <!-- images -->
     <div class="relative z-10 max-w-6xl px-4 mx-auto" data-aos="fade-up" data-aos-delay="100">
       <Swiper
         :modules="[Pagination, Autoplay]"
