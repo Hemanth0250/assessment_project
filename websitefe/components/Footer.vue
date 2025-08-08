@@ -59,10 +59,20 @@
           <h4 class="mb-4 text-lg font-bold">Our Newsletter</h4>
           <p class="mb-4 text-sm">Subscribe to our newsletter and receive the latest news about our products and services!</p>
           <form class="flex flex-col sm:flex-row">
-            <input type="email" placeholder="Your Email" class="flex-1 p-2 text-sm text-white bg-transparent border border-gray-600 outline-none focus:border-orange-500 rounded-l-md sm:rounded-none sm:rounded-l-md" />
-            <button type="submit" class="px-4 py-2 mt-2 text-white transition bg-orange-500 rounded-md sm:mt-0 sm:ml-2 hover:bg-orange-600">Subscribe</button>
+            <input 
+              type="email" 
+              placeholder="Your Email"
+              class="flex-1 p-2 text-sm text-white bg-transparent border border-gray-600 rounded-md outline-none focus:border-orange-500 sm:rounded-l-md sm:rounded-r-none"
+            />
+            <button 
+              type="submit"
+              class="px-4 py-2 mt-2 text-white transition bg-orange-500 rounded-md hover:bg-orange-600 sm:mt-0 sm:ml-0 sm:rounded-r-md sm:rounded-l-none"
+            >
+            Subscribe
+            </button>
           </form>
         </div>
+
 
       </div>
 
