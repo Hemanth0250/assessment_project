@@ -1,11 +1,13 @@
 <template>
   <footer class="bg-[#0D1114] text-white pt-12">
-    <div class="container px-4 mx-auto">
-      <div class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+  <div class="container px-12 mx-auto"> <!-- More padding on left & right -->
+    <div class="grid grid-cols-2 gap-x-2 gap-y-6 md:grid-cols-2 lg:grid-cols-4"> <!-- Smaller horizontal gap -->
+
+
 
         <!-- Column 1: Company Info -->
         <div>
-          <h2 class="mb-4 text-2xl font-bold text-white font-raleway">Dewi</h2>
+          <h2 class="text-2xl font-bold text-white mb-7 font-raleway text-bold">Dewi</h2>
           <p class="mb-1 text-sm">no 25, 1st cross</p>
           <p class="mb-3 text-sm">jayanagar, Bangalore 560026</p>
           <p class="text-sm font-semibold">Phone: <span class="font-normal">+91 123 456 789</span></p>

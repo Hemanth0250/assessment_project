@@ -61,7 +61,7 @@
 
   <!-- Stats Section -->
   <section class="px-6 py-16 bg-gray-100 md:px-12" data-aos="fade-up" data-aos-offset="50">
-    <div class="grid max-w-screen-xl grid-cols-1 gap-6 mx-auto md:grid-cols-4">
+    <div class="grid max-w-screen-xl grid-cols-1 gap-6 mx-auto md:grid-cols-4 hover:text-orange-600" >
       <StatCard icon="bi-emoji-smile" :endValue="250" label="Happy Clients" data-aos="fade-up" data-aos-delay="100"/>
       <StatCard icon="bi-journal-richtext" :endValue="150" label="Projects" data-aos="fade-up" data-aos-delay="200"/>
       <StatCard icon="bi-headset" :endValue="12000" label="Hours of Support" data-aos="fade-up" data-aos-delay="300"/>
