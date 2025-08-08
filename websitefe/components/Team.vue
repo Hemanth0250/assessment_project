@@ -24,13 +24,15 @@ const teamMembers = [
 <template>
   <section id="team" class="py-16 bg-gray-100" data-aos="fade-up" data-aos-delay="100">
     <!-- Section Title -->
-     <div class="max-w-4xl px-4 mx-auto mb-12 text-center">
-      <h2 class="relative inline-block text-sm font-semibold tracking-widest text-gray-500 uppercase">
-        Team
-        <span class="block w-20 h-1 mx-auto mt-2 bg-orange-500"></span>
-      </h2>
-      <h1 class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 uppercase md:text-5xl font-raleway">
-        CHECK OUR <span class="text-orange-500">Team</span>
+     <div class="px-4 mx-auto mb-12 text-left max-w-7xl" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center space-x-4">
+        <h2 class="text-sm font-semibold tracking-widest text-gray-500 uppercase">
+          Team
+        </h2>
+        <span class="block w-20 h-1 bg-orange-500"></span>
+      </div>
+      <h1 class="mt-2 text-2xl font-extrabold tracking-tight text-gray-900 uppercase md:text-2xl font-raleway">
+        CHECK OUR TEAM
       </h1>
     </div>
     

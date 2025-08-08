@@ -38,13 +38,15 @@ const filteredItems = computed(() => {
 <template>
   <section id="portfolio" class="px-4 py-16 portfolio">
     <!-- Section Title -->
-    <div class="max-w-4xl px-4 mx-auto mb-12 text-center" data-aos="fade-up" data-aos-delay="100">
-      <h2 class="relative inline-block text-sm font-semibold tracking-widest text-gray-500 uppercase">
-        Portfolio
-        <span class="block w-20 h-1 mx-auto mt-2 bg-orange-500"></span>
-      </h2>
-      <h1 class="mx-auto mt-2 text-3xl font-extrabold tracking-tight text-gray-900 uppercase md:text-5xl font-raleway">
-        CHECK OUR <span class="text-orange-500">PORTFOLIO</span>
+    <div class="px-4 mx-auto mb-12 text-left max-w-7xl" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center space-x-4">
+        <h2 class="text-sm font-semibold tracking-widest text-gray-500 uppercase">
+          Portfolio
+        </h2>
+        <span class="block w-20 h-1 bg-orange-500"></span>
+      </div>
+      <h1 class="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 uppercase md:text-2xl font-raleway">
+        CHECK OUR PORTFOLIO
       </h1>
     </div>
 

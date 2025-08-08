@@ -67,6 +67,7 @@ const tabs = [
   },
 ]
 </script>
+
 <template>
   <section id="features" class="py-16 bg-white">
     <div class="px-4 mx-auto max-w-7xl">

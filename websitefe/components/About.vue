@@ -26,7 +26,7 @@ onMounted(async () => {
     <div class="grid items-center max-w-screen-xl gap-10 mx-auto md:grid-cols-2">
       <!-- Left Column (Image) -->
       <div data-aos="fade-up" data-aos-delay="100">
-        <h2 class="mb-4 text-3xl font-bold text-gray-900 md:text-4xl">
+        <h2 class="mb-4 text-xl font-bold text-gray-900 md:text-2xl">
           We provide reliable solutions for your business needs
         </h2>
         <img src="/image/image1.png" alt="Team collaborating"
