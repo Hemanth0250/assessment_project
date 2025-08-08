@@ -1,8 +1,6 @@
 <script setup>
 import { useHead } from '#app'
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
-import Header from '~/components/Header.vue'
+import Navbar from '@/components/Navbar.vue'
 
 useHead({
   link: [
@@ -15,13 +13,11 @@ useHead({
 </script>
 
 <template>
-  <div>
-    <Navbar />
-    
+  <NuxtLayout >
     <NuxtPage />
-    <Footer />
-    
-  </div>
+  </NuxtLayout >
+
+  
 </template>
 
 <style>
