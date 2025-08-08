@@ -1,3 +1,26 @@
+<script setup>
+const teamMembers = [
+  {
+    name: 'Walter White',
+    role: 'Chief Executive Officer',
+    img: 'image/team/team-1.jpg',
+    socials: ['twitter-x', 'facebook', 'instagram', 'linkedin']
+  },
+  {
+    name: 'Sarah Jhonson',
+    role: 'Product Manager',
+    img: 'image/team/team-2.jpg',
+    socials: ['twitter-x', 'facebook', 'instagram', 'linkedin']
+  },
+  {
+    name: 'William Anderson',
+    role: 'CTO',
+    img: 'image/team/team-3.jpg',
+    socials: ['twitter-x', 'facebook', 'instagram', 'linkedin']
+  }
+]
+</script>
+
 <template>
   <section id="team" class="py-16 bg-gray-100" data-aos="fade-up" data-aos-delay="100">
     <!-- Section Title -->
@@ -45,29 +68,6 @@
     </div>
   </section>
 </template>
-
-<script setup>
-const teamMembers = [
-  {
-    name: 'Walter White',
-    role: 'Chief Executive Officer',
-    img: 'image/team/team-1.jpg',
-    socials: ['twitter-x', 'facebook', 'instagram', 'linkedin']
-  },
-  {
-    name: 'Sarah Jhonson',
-    role: 'Product Manager',
-    img: 'image/team/team-2.jpg',
-    socials: ['twitter-x', 'facebook', 'instagram', 'linkedin']
-  },
-  {
-    name: 'William Anderson',
-    role: 'CTO',
-    img: 'image/team/team-3.jpg',
-    socials: ['twitter-x', 'facebook', 'instagram', 'linkedin']
-  }
-]
-</script>
 
 <style scoped>
 /* Additional styling if needed */

@@ -1,3 +1,17 @@
+<script setup>
+import Hero from '@/components/Hero.vue'
+import About from '@/components/About.vue'
+import Services from '@/components/Services.vue'
+import Client from '@/components/Client.vue'
+import Features from '@/components/Features.vue'
+import Services2 from '@/components/Services2.vue'
+import Slideview from '@/components/Slideview.vue'
+import Portfolio from '@/components/Portfolio.vue'
+import Team from '@/components/Team.vue'
+import Contact from '@/components/Contact.vue'
+import Footer from '@/components/Footer.vue'
+</script>
+
 <template>
   <div>
     <!-- Hero Section -->
@@ -48,16 +62,4 @@
   </div>
 </template>
 
-<script setup>
-import Hero from '@/components/Hero.vue'
-import About from '@/components/About.vue'
-import Services from '@/components/Services.vue'
-import Client from '@/components/Client.vue'
-import Features from '@/components/Features.vue'
-import Services2 from '@/components/Services2.vue'
-import Slideview from '@/components/Slideview.vue'
-import Portfolio from '@/components/Portfolio.vue'
-import Team from '@/components/Team.vue'
-import Contact from '@/components/Contact.vue'
-import Footer from '@/components/Footer.vue'
-</script>
+

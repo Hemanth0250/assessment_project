@@ -1,3 +1,14 @@
+<script setup>
+const clients = [
+  '/image/clients/client-1.png',
+  '/image/clients/client-2.png',
+  '/image/clients/client-3.png',
+  '/image/clients/client-4.png',
+  '/image/clients/client-5.png',
+  '/image/clients/client-6.png',
+]
+</script>
+
 <template>
   <section id="clients" class="py-12 bg-gray-50">
     <div class="px-4 mx-auto max-w-7xl" data-aos="fade-up">
@@ -18,13 +29,4 @@
   </section>
 </template>
 
-<script setup>
-const clients = [
-  '/image/clients/client-1.png',
-  '/image/clients/client-2.png',
-  '/image/clients/client-3.png',
-  '/image/clients/client-4.png',
-  '/image/clients/client-5.png',
-  '/image/clients/client-6.png',
-]
-</script>
+

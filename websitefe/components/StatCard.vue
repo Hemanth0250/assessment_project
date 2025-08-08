@@ -1,14 +1,3 @@
-<template>
-  <div
-    ref="card"
-    class="flex flex-col items-center p-6 text-center transition bg-white shadow-md rounded-xl hover:shadow-lg"
-  >
-    <i :class="['bi', icon, 'text-4xl text-orange-500 mb-3']"></i>
-    <div class="text-3xl font-bold text-gray-800">{{ count }}</div>
-    <p class="mt-2 text-gray-600">{{ label }}</p>
-  </div>
-</template>
-
 <script setup>
 import { ref, watch } from 'vue'
 
@@ -54,3 +43,21 @@ watch(card, (el) => {
   if (el) observe()
 })
 </script>
+
+<template>
+  <div
+    ref="card"
+    class="flex items-center p-6 text-left transition bg-white shadow-md rounded-xl hover:shadow-lg"
+  >
+    <!-- Icon on the left -->
+    <i :class="['bi', icon, 'text-4xl text-orange-500 mr-4']"></i>
+
+    <!-- Text on the right -->
+    <div class="flex flex-col justify-center">
+      <div class="text-3xl font-bold text-gray-800">{{ count }}</div>
+      <p class="mt-1 text-gray-600">{{ label }}</p>
+    </div>
+  </div>
+</template>
+
+

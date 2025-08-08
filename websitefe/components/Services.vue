@@ -1,3 +1,29 @@
+<script setup>
+const services = [
+  {
+    title: 'Business Consulting',
+    description:
+      'Expert advice to help your business grow, improve efficiency, achieve your goals, and maximize profitability.',
+    image: '/image/services-1.png',
+    icon: 'bi-activity',
+  },
+  {
+    title: 'Digital Marketing',
+    description:
+      'Comprehensive digital marketing solutions to boost your online presence and reach your target audience effectively.',
+    image: '/image/services-2.png',
+    icon: 'bi-broadcast',
+  },
+  {
+    title: 'Creative Design',
+    description:
+      'Innovative design solutions to enhance your brand identity and create visually engaging experiences.',
+    image: '/image/services-3.png',
+    icon: 'bi-easel',
+  },
+]
+</script>
+
 <template>
   <section id="services" class="py-16 bg-white" >
     <!-- Section Title -->
@@ -59,31 +85,7 @@
   </section>
 </template>
 
-<script setup>
-const services = [
-  {
-    title: 'Business Consulting',
-    description:
-      'Expert advice to help your business grow, improve efficiency, achieve your goals, and maximize profitability.',
-    image: '/image/services-1.png',
-    icon: 'bi-activity',
-  },
-  {
-    title: 'Digital Marketing',
-    description:
-      'Comprehensive digital marketing solutions to boost your online presence and reach your target audience effectively.',
-    image: '/image/services-2.png',
-    icon: 'bi-broadcast',
-  },
-  {
-    title: 'Creative Design',
-    description:
-      'Innovative design solutions to enhance your brand identity and create visually engaging experiences.',
-    image: '/image/services-3.png',
-    icon: 'bi-easel',
-  },
-]
-</script>
+
 
 <style scoped>
 /* Optional: Smooth hover scale transition if not using Tailwind's built-in transition */

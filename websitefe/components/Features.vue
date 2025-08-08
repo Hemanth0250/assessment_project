@@ -1,66 +1,3 @@
-<template>
-  <section id="features" class="py-16 bg-white">
-    <div class="px-4 mx-auto max-w-7xl">
-      <!-- Tabs -->
-      <div class="grid grid-cols-2 gap-4 mb-8 md:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
-        <div
-          v-for="(tab, index) in tabs"
-          :key="index"
-          @click="activeTab = index"
-          :class="[
-            'cursor-pointer border px-4 py-5 flex items-center justify-center text-center transition-all duration-300',
-            activeTab === index
-              ? 'bg-orange-600 text-white border-orange-600'
-              : 'bg-white text-gray-800 hover:border-orange-500 hover:text-orange-600',
-          ]"
-        >
-          <div class="flex flex-col items-center">
-            <i :class="`${tab.icon} text-4xl md:text-5xl mb-2`"></i>
-            <h4 class="hidden text-sm font-semibold lg:block">{{ tab.title }}</h4>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tab Content -->
-      <div v-if="tabs[activeTab]" data-aos="fade-up" data-aos-delay="200">
-        <div class="grid items-center gap-8 md:grid-cols-2">
-          <!-- Text -->
-          <div>
-            <h3 class="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">
-              {{ tabs[activeTab].heading }}
-            </h3>
-            <p v-if="tabs[activeTab].subtext" class="mb-4 italic text-gray-600">
-              {{ tabs[activeTab].subtext }}
-            </p>
-            <ul class="mb-4 space-y-2">
-              <li
-                v-for="(point, idx) in tabs[activeTab].points"
-                :key="idx"
-                class="flex items-start gap-2"
-              >
-                <i class="mt-1 text-orange-600 bi bi-check2-all"></i>
-                <span class="text-gray-700">{{ point }}</span>
-              </li>
-            </ul>
-            <p v-if="tabs[activeTab].paragraph" class="text-gray-700">
-              {{ tabs[activeTab].paragraph }}
-            </p>
-          </div>
-
-          <!-- Image -->
-          <div class="text-center">
-            <img
-              :src="tabs[activeTab].image"
-              alt="Feature Image"
-              class="w-full h-auto rounded shadow"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
-
 <script setup>
 import { ref } from 'vue'
 
@@ -130,6 +67,70 @@ const tabs = [
   },
 ]
 </script>
+<template>
+  <section id="features" class="py-16 bg-white">
+    <div class="px-4 mx-auto max-w-7xl">
+      <!-- Tabs -->
+      <div class="grid grid-cols-2 gap-4 mb-8 md:grid-cols-4" data-aos="fade-up" data-aos-delay="100">
+        <div
+          v-for="(tab, index) in tabs"
+          :key="index"
+          @click="activeTab = index"
+          :class="[
+            'cursor-pointer border px-4 py-5 flex items-center justify-center text-center transition-all duration-300',
+            activeTab === index
+              ? 'bg-orange-600 text-white border-orange-600'
+              : 'bg-white text-gray-800 hover:border-orange-500 hover:text-orange-600',
+          ]"
+        >
+          <div class="flex flex-col items-center">
+            <i :class="`${tab.icon} text-4xl md:text-5xl mb-2`"></i>
+            <h4 class="hidden text-sm font-semibold lg:block">{{ tab.title }}</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div v-if="tabs[activeTab]" data-aos="fade-up" data-aos-delay="200">
+        <div class="grid items-center gap-8 md:grid-cols-2">
+          <!-- Text -->
+          <div>
+            <h3 class="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">
+              {{ tabs[activeTab].heading }}
+            </h3>
+            <p v-if="tabs[activeTab].subtext" class="mb-4 italic text-gray-600">
+              {{ tabs[activeTab].subtext }}
+            </p>
+            <ul class="mb-4 space-y-2">
+              <li
+                v-for="(point, idx) in tabs[activeTab].points"
+                :key="idx"
+                class="flex items-start gap-2"
+              >
+                <i class="mt-1 text-orange-600 bi bi-check2-all"></i>
+                <span class="text-gray-700">{{ point }}</span>
+              </li>
+            </ul>
+            <p v-if="tabs[activeTab].paragraph" class="text-gray-700">
+              {{ tabs[activeTab].paragraph }}
+            </p>
+          </div>
+
+          <!-- Image -->
+          <div class="text-center">
+            <img
+              :src="tabs[activeTab].image"
+              alt="Feature Image"
+              class="w-full h-auto rounded shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+
 
 <style scoped>
 [v-cloak] {

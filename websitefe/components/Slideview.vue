@@ -1,3 +1,48 @@
+<script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+const testimonials = [
+  {
+    name: 'Saul Goodman',
+    role: 'CEO & Founder',
+    image: '/image/testimonials/testimonials-1.png',
+    quote:
+      'Saul helped us transform our business. His leadership and vision are unmatched.',
+    },
+    {
+    name: 'Sara Wilsson',
+    role: 'Designer',
+    image: '/image/testimonials/testimonials-2.jpg',
+    quote:
+      'Working with this team was a fantastic experience. Their creativity brought our ideas to life.',
+    },
+    {
+    name: 'Jena Karlis',
+    role: 'Store Owner',
+    image: '/image/testimonials/testimonials-3.jpg',
+    quote:
+      'The service was excellent and the results exceeded my expectations. Highly recommended!',
+    },
+    {
+    name: 'Matt Brandon',
+    role: 'Freelancer',
+    image: '/image/testimonials/testimonials-4.jpg',
+    quote:
+      'Professional, reliable, and innovative. I look forward to working together again.',
+    },
+    {
+    name: 'John Larson',
+    role: 'Entrepreneur',
+    image: '/image/testimonials/testimonials-5.jpg',
+    quote:
+      'Their expertise and dedication made a real difference in my project’s success.',
+    },
+];
+</script>
+
 <template>
   <section id="testimonials" class="relative py-20 overflow-hidden text-white bg-gray-900">
     <img
@@ -50,50 +95,7 @@
   </section>
 </template>
 
-<script setup>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/pagination';
 
-const testimonials = [
-  {
-    name: 'Saul Goodman',
-    role: 'CEO & Founder',
-    image: '/image/testimonials/testimonials-1.png',
-    quote:
-      'Saul helped us transform our business. His leadership and vision are unmatched.',
-    },
-    {
-    name: 'Sara Wilsson',
-    role: 'Designer',
-    image: '/image/testimonials/testimonials-2.jpg',
-    quote:
-      'Working with this team was a fantastic experience. Their creativity brought our ideas to life.',
-    },
-    {
-    name: 'Jena Karlis',
-    role: 'Store Owner',
-    image: '/image/testimonials/testimonials-3.jpg',
-    quote:
-      'The service was excellent and the results exceeded my expectations. Highly recommended!',
-    },
-    {
-    name: 'Matt Brandon',
-    role: 'Freelancer',
-    image: '/image/testimonials/testimonials-4.jpg',
-    quote:
-      'Professional, reliable, and innovative. I look forward to working together again.',
-    },
-    {
-    name: 'John Larson',
-    role: 'Entrepreneur',
-    image: '/image/testimonials/testimonials-5.jpg',
-    quote:
-      'Their expertise and dedication made a real difference in my project’s success.',
-    },
-];
-</script>
 
 <style scoped>
 .testimonials-slider :deep(.swiper-pagination-bullet) {

@@ -1,3 +1,29 @@
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const isMenuOpen = ref(false)
+const isSticky = ref(false)
+
+const handleScroll = () => {
+  isSticky.value = window.scrollY > 100
+}
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+
+const openVideo = () => {
+  window.open('https://www.youtube.com/', '_blank')
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+</script>
+
 <template>
   <header
     :class="[
@@ -95,31 +121,7 @@
   </header>
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
 
-const isMenuOpen = ref(false)
-const isSticky = ref(false)
-
-const handleScroll = () => {
-  isSticky.value = window.scrollY > 100
-}
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-}
-
-const openVideo = () => {
-  window.open('https://www.youtube.com/', '_blank')
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
-</script>
 
 <style scoped>
 header {

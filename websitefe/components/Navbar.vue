@@ -1,3 +1,67 @@
+<script setup>
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const isSticky = ref(false)
+const isMenuOpen = ref(false)
+const isDropdownOpen = ref(false)
+const activeSection = ref('home')
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+  if (!isMenuOpen.value) isDropdownOpen.value = false
+}
+const closeMenu = () => {
+  isMenuOpen.value = false
+  isDropdownOpen.value = false
+}
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value
+}
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+  closeMenu()
+}
+const handleMobileNav = () => {
+  closeMenu()
+}
+
+const handleScroll = () => {
+  isSticky.value = window.scrollY > 100
+  if (window.scrollY < 200) {
+    activeSection.value = 'home'
+  }
+}
+
+let observer
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+
+  const sections = document.querySelectorAll('section[id]')
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id
+          activeSection.value = id === 'hero' ? 'home' : id
+        }
+      })
+    },
+    {
+      threshold: 0.3,
+      rootMargin: '0px 0px -20% 0px'
+    }
+  )
+
+  sections.forEach((section) => observer.observe(section))
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+  if (observer) observer.disconnect()
+})
+</script>
+
 <template>
   <nav
     :class="[
@@ -91,69 +155,6 @@
   </button>
 </template>
 
-<script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
-
-const isSticky = ref(false)
-const isMenuOpen = ref(false)
-const isDropdownOpen = ref(false)
-const activeSection = ref('home')
-
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-  if (!isMenuOpen.value) isDropdownOpen.value = false
-}
-const closeMenu = () => {
-  isMenuOpen.value = false
-  isDropdownOpen.value = false
-}
-const toggleDropdown = () => {
-  isDropdownOpen.value = !isDropdownOpen.value
-}
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
-  closeMenu()
-}
-const handleMobileNav = () => {
-  closeMenu()
-}
-
-const handleScroll = () => {
-  isSticky.value = window.scrollY > 100
-  if (window.scrollY < 200) {
-    activeSection.value = 'home'
-  }
-}
-
-let observer
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-
-  const sections = document.querySelectorAll('section[id]')
-  observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.id
-          activeSection.value = id === 'hero' ? 'home' : id
-        }
-      })
-    },
-    {
-      threshold: 0.3,
-      rootMargin: '0px 0px -20% 0px'
-    }
-  )
-
-  sections.forEach((section) => observer.observe(section))
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-  if (observer) observer.disconnect()
-})
-</script>
 
 <style scoped>
 .nav-link {

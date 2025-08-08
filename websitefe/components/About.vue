@@ -1,3 +1,26 @@
+<script setup>
+import { onMounted } from 'vue'
+import StatCard from '@/components/StatCard.vue'
+
+// Glightbox: Only load in browser
+onMounted(async () => {
+  if (typeof window !== 'undefined') {
+    await import('glightbox/dist/css/glightbox.css')
+    const GLightbox = (await import('glightbox')).default
+    GLightbox({ selector: '.glightbox' })
+
+    // AOS animations
+    await import('aos/dist/aos.css')
+    const AOS = (await import('aos')).default
+    AOS.init({
+      duration: 800, // ms
+      offset: 20, // px from trigger point (≈ 2cm effect)
+      easing: 'ease-out',
+      once: true // only animate once
+    })
+  }
+})
+</script>
 <template>
   <section class="px-6 py-16 bg-white md:px-12" data-aos="fade-up" data-aos-offset="50">
     <div class="grid items-center max-w-screen-xl gap-10 mx-auto md:grid-cols-2">
@@ -70,27 +93,5 @@
   </section>
 </template>
 
-<script setup>
-import { onMounted } from 'vue'
-import StatCard from '@/components/StatCard.vue'
 
-// Glightbox: Only load in browser
-onMounted(async () => {
-  if (typeof window !== 'undefined') {
-    await import('glightbox/dist/css/glightbox.css')
-    const GLightbox = (await import('glightbox')).default
-    GLightbox({ selector: '.glightbox' })
-
-    // AOS animations
-    await import('aos/dist/aos.css')
-    const AOS = (await import('aos')).default
-    AOS.init({
-      duration: 800, // ms
-      offset: 20, // px from trigger point (≈ 2cm effect)
-      easing: 'ease-out',
-      once: true // only animate once
-    })
-  }
-})
-</script>
 
