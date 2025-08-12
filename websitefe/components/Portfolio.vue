@@ -38,7 +38,7 @@ const filteredItems = computed(() => {
 <template>
   <section id="portfolio" class="px-4 py-16 portfolio">
     <!-- Section Title -->
-    <div class="px-4 mx-auto mb-12 text-left max-w-7xl" data-aos="fade-up" data-aos-delay="100">
+    <div class="px-4 mx-auto mb-12 text-left max-w-7xl " data-aos="fade-up" data-aos-delay="100">
       <div class="flex items-center space-x-4">
         <h2 class="text-sm font-semibold tracking-widest text-gray-500 uppercase">
           Portfolio
@@ -51,7 +51,7 @@ const filteredItems = computed(() => {
     </div>
 
     <!-- Filters -->
-    <ul class="flex flex-wrap justify-center gap-4 mb-10 text-lg font-medium" data-aos="fade-up" data-aos-delay="200">
+    <ul class="flex flex-wrap justify-center gap-4 mb-10 text-lg font-medium " data-aos="fade-up" data-aos-delay="200">
       <li
         v-for="cat in categories"
         :key="cat"
@@ -64,7 +64,7 @@ const filteredItems = computed(() => {
     </ul>
 
     <!-- Portfolio Grid -->
-    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="250">
+    <div class="grid items-center justify-between max-w-screen-xl grid-cols-1 gap-6 px-6 py-4 mx-auto sm:grid-cols-3 lg:grid-cols-3flex" data-aos="fade-up" data-aos-delay="250">
       <transition-group name="zoom" tag="div" class="contents">
         <div
           v-for="(item, index) in filteredItems"

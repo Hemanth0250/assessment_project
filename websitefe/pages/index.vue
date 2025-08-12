@@ -54,12 +54,13 @@ import Footer from '@/components/Footer.vue'
     <section id="contact">
       <Contact /> 
     </section>
-    <!-- <section id="footer">
-      <Footer />
-    </section> -->
+ 
     
       
   </div>
 </template>
+<style>
+
+</style>
 
 

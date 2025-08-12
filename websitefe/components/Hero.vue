@@ -21,7 +21,7 @@ const openVideo = () => {
         <h1 class="mb-4 text-4xl font-bold md:text-5xl hover:text-orange-500">
           PLAN. LAUNCH. GROW.
         </h1>
-        <p class="px-4 py-2 mb-5 text-xl rounded-lg max-w-xxl md:text-l">
+        <p class="px-4 py-2 mb-5 text-xl rounded-lg max-w-xxl md:text-l font-roboto">
           We are team of talented designers making websites with Vue.js
         </p>
       <div class="flex justify-center w-full">

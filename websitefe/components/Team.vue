@@ -24,7 +24,7 @@ const teamMembers = [
 <template>
   <section id="team" class="py-16 bg-gray-100" data-aos="fade-up" data-aos-delay="100">
     <!-- Section Title -->
-     <div class="px-4 mx-auto mb-12 text-left max-w-7xl" data-aos="fade-up" data-aos-delay="100">
+    <div class="px-4 mx-auto mb-12 max-w-7xl" data-aos="fade-up" data-aos-delay="100">
       <div class="flex items-center space-x-4">
         <h2 class="text-sm font-semibold tracking-widest text-gray-500 uppercase">
           Team
@@ -35,25 +35,24 @@ const teamMembers = [
         CHECK OUR TEAM
       </h1>
     </div>
-    
 
     <!-- Team Grid -->
-    <div class="grid max-w-6xl grid-cols-1 gap-10 px-4 mx-auto sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="200">
+    <div class="grid max-w-screen-xl grid-cols-1 gap-8 px-6 mx-auto sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="200">
       <div
-        v-for="(member, index) in teamMembers" 
+        v-for="(member, index) in teamMembers"
         :key="index"
         class="relative"
         :data-aos="'fade-up'"
         :data-aos-delay="100 * (index + 1)"
       >
         <!-- Image -->
-        <div class="overflow-hidden">
-          <img :src="member.img" alt="Team member" class="object-cover w-full h-auto rounded-md" />
+        <div class="overflow-hidden rounded-md">
+          <img :src="member.img" alt="Team member" class="object-cover w-full h-auto transition-transform duration-300 hover:scale-105" />
         </div>
 
         <!-- Info Card -->
         <div
-          class="absolute p-4 transition duration-300 bg-white shadow-md left-4 right-4 -bottom-8"
+          class="absolute p-4 bg-white rounded-md shadow-md left-4 right-4 -bottom-8"
         >
           <h4 class="relative pb-2 text-base font-bold">
             {{ member.name }}
@@ -70,7 +69,3 @@ const teamMembers = [
     </div>
   </section>
 </template>
-
-<style scoped>
-/* Additional styling if needed */
-</style>
