@@ -6,6 +6,8 @@ const clients = [
   '/image/clients/client-4.png',
   '/image/clients/client-5.png',
   '/image/clients/client-6.png',
+
+
 ]
 </script>
 

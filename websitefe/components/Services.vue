@@ -32,7 +32,7 @@ const services = [
         <h2 class="text-sm font-semibold tracking-widest text-gray-500 uppercase">
           Services
         </h2>
-        <span class="block w-20 h-1 bg-orange-500"></span>
+        <span class="block w-40 h-0.5 bg-orange-500"></span>
       </div>
       <h1 class="mt-2 text-xl font-extrabold tracking-tight text-gray-900 uppercase md:text-2xl font-raleway">
         Featured Services
@@ -61,7 +61,7 @@ const services = [
 
         <!-- Details Card -->
         <div
-          class="relative z-10 px-6 pt-16 pb-8 -mt-12 text-center bg-white rounded-lg shadow-lg"
+          class="relative z-10 px-6 pt-16 pb-8 -mt-12 text-center bg-white rounded-lg shadow-lg "
           data-aos="fade-up"
           :data-aos-delay="250 + index * 100"
         >

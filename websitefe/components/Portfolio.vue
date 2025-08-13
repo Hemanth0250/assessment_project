@@ -43,7 +43,7 @@ const filteredItems = computed(() => {
         <h2 class="text-sm font-semibold tracking-widest text-gray-500 uppercase">
           Portfolio
         </h2>
-        <span class="block w-20 h-1 bg-orange-500"></span>
+        <span class="block w-40 h-0.5 bg-orange-500"></span>
       </div>
       <h1 class="mt-2 text-4xl font-extrabold tracking-tight text-gray-900 uppercase md:text-2xl font-raleway">
         CHECK OUR PORTFOLIO
